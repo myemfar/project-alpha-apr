@@ -22,4 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("projects/", include("projects.urls")),
     path("", lambda req: redirect("/projects/"), name="home"),
+    path("accounts/", include("accounts.urls"))
 ]
