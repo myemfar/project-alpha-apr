@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from projects.models import Project
 from projects.forms import ProjectForm
 from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -18,7 +19,7 @@ def list_projects(request):
 def show_project(request, id=id):
     project = get_object_or_404(Project, id=id)
     context = {
-        'project': project,
+        "project": project,
     }
     return render(request, "projects/detail.html", context)
 

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from projects.models import Project
 
+
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = (
@@ -8,4 +9,6 @@ class ProjectAdmin(admin.ModelAdmin):
         "description",
         "owner",
     )
+
+
 # Register your models here.
